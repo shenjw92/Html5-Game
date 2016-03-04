@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+	<!--
+	
+	 CSS3 Card Games Example
+	 http://gamedesign.cc/html5games/css3-matching-game/
+	 
+	 This is an example game for my coming book.
+	 
+	 Copyright 2011, Thomas Seng Hin Mak
+	 makzan@gmail.com
+	   
+	 All Right Reserved.
+	 
+	-->
+	
+	<meta charset=utf-8>
+	<title>扑克记忆小游戏</title>
+	<link href='http://fonts.googleapis.com/css?family=Droid+Serif:regular,bold&subset=latin' rel='stylesheet' type='text/css'>
+	<link href="http://fonts.googleapis.com/css?family=Orbitron:400,700" rel="stylesheet" type="text/css" >
+	<link rel="stylesheet" href="css/matchgame.css" />
+</head>
+<body>
+	<header>
+		<h1>萌 妹 扑 克</h1>
+	</header>
+	<p>上海大学机自学院   沈俊雯 出品</p>
+	
+
+    <audio  autoplay="autoplay">   <!--音乐控制器-->
+        <source src="music/blankspace.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <form  method="get">
+        <p><label><fond color="000000">用户名:</fond>
+            <input type="text/css" name="username" placeholder="enter a new username" required/>
+            <input type="submit" value="Submit" />
+            <output name="username"></output>
+        </label>
+        </p>
+    </form>
+
+	<div id="timer">   <!--时间控制器-->
+		时间: <span id="elapsed-time">00:00</span>  <!--elapsed-time是时间控制器-->
+	</div>
+
+	<section id="game">		
+		<div id="cards">			
+			<div class="card">
+                <div class="face front"></div>
+				<div class="face back"></div>
+			</div> <!-- .card -->						
+		</div> <!-- #cards -->
+	</section> <!-- #game -->
+	
+	<section id="popup" class="hide">
+		<div id="popup-bg">
+		</div>
+		
+		<div id="popup-box">
+			<div class="ribbon hide">				
+				<div class="ribbon-body">
+					<span>新的记录</span>
+				</div>			
+				<div class="triangle"></div>	
+			</div>		
+			<div id="popup-box-content">
+				<p>您赢了!</p>
+				<p><fond color="00FFFF">你所消耗的时间:</fond></p>
+				<p><span class='score'>13</span></p>
+				<p><small>上次记录: <span class='last-score'>20</span><br>
+				Saved on: <span class='saved-time'>13/4/2015 3:14pm</span></small></p>
+			</div>
+		</div>
+	</section>
+
+<script src="js/jquery-1.6.min.js"></script>
+<script src="js/html5games.matchgame.js"></script>
+</body>
+</html>
